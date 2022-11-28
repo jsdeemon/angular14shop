@@ -1,6 +1,6 @@
 # Store
 https://www.youtube.com/watch?v=Kbauf9IgsC4 
-37 minutes
+50 minutes
 
 npm i @angular/cli@14.2.1 
 
