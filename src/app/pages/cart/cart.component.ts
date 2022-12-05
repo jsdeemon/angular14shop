@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
   }]}; 
 
   dataSource: Array<CartItem> = [];
-  ddisplayedColumns: Array<string> = [
+  displayedColumns: Array<string> = [
     'product',
     'name',
     'price',
@@ -29,6 +29,12 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataSource = this.cart.items;
+  } 
+
+  getTotal(items: Array<CartItem>): number {
+    return items
+    .map((item) => item.price * item.quantity)
+    .reduce((prev, current) => prev + current, 0);
   }
 
 }
