@@ -24,7 +24,7 @@ export class CartService {
     this.cart.next({ items });
     this._snackbar.open('1 item added to cart', 'Ok', { duration: 3000 });
 
-    console.log(this.cart.value);
+    // console.log(this.cart.value);
 
   }
 
@@ -32,6 +32,11 @@ export class CartService {
     return items
     .map((item) => item.price * item.quantity)
     .reduce((prev, current) => prev + current, 0);
+  }
+
+  clearCart(): void {
+    this.cart.next({ items: [] });
+    this._snackbar.open('Cart has been cleared', 'Ok', {duration: 3000});
   }
 
 }
