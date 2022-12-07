@@ -29,7 +29,15 @@ npx tailwindcss init
 tailwind.config.js 
 
 generate component 
-ng g c products-header
+ng g c products-header 
+
+cd services
+generate neww service 
+ng g s cart
+
+need to import service 
+add
+app.module.ts -> providers -> CartService
 
  content: ["./src/**/*.{html,ts}"],
 
