@@ -15,9 +15,9 @@ gutterSize="30"
 >
 
 <mat-grid-tile>
-    <!--  (addToCart)="onAddToCart($event)" -->
+   
     <app-product-box
-    
+    (addToCart)="onAddToCart($event)" 
     class="w-full"
       [fullWidthMode]="cols === 1" >
     </app-product-box>
