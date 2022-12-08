@@ -39,6 +39,10 @@ need to import service
 add
 app.module.ts -> providers -> CartService
 
+Fake store API
+cd services 
+ng g s store
+
  content: ["./src/**/*.{html,ts}"],
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
