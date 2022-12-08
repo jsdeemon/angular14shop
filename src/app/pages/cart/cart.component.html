@@ -58,12 +58,16 @@
 
         <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef >
-                <button mat-raised-button color="warn" class="float-right"> 
+                <button 
+                (click)="onClearCart()"
+                mat-raised-button color="warn" class="float-right"> 
                 Clear all
                 </button>
             </th>    
             <td mat-cell *matCellDef="let element">
-            <button mat-mini-fab color="warn" class="float-right">
+            <button 
+            mat-mini-fab color="warn" 
+            (click)="onRemoveFromCart(element)"class="float-right">
                 <mat-icon>close</mat-icon>
                 </button>
                
