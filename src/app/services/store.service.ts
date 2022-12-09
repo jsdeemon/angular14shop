@@ -18,4 +18,10 @@ export class StoreService {
     )
   }
 
+  getAllCategories(): Observable<Array<string>> {
+    return this.httpClient.get<Array<string>>(
+      `${FAKE_STORE_API}/products/categories`
+    )
+  }
+
 }
